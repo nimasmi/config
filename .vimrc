@@ -100,7 +100,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
@@ -116,6 +116,10 @@ Bundle 'FuzzyFinder'
 Bundle 'git://git.wincent.com/command-t.git'
 " git gutter
 Bundle 'airblade/vim-gitgutter'
+" matchit
+Bundle 'jwhitley/vim-matchit'
+" flake8
+Bundle 'nvie/vim-flake8'
 
 filetype plugin indent on     " required!
 "
@@ -167,3 +171,34 @@ set wildignore=*.swp,*.bak,*.pyc
 " I'm a git user
 set nobackup
 set noswapfile
+
+" map <leader>space to clear search highlights
+nnoremap <leader><space> :noh<cr>:call clearmatches()<cr>¬
+
+" map n and N to place search results in centre of the screen, also open
+" enough folds to make the search results visible
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Clean trailing whitespace
+nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
+
+" highlight anything over 80 columns
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+:match OverLength /\%81v.\+/
+
+" highlight trailing whitespace, (done in a way that future colorscheme
+" commands won't countermand it
+" :autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+" match trailing whitespace, except when typing at the end of a line
+" :match ExtraWhitespace /\s\+\%#\@<!$/
+" redraw the gui to highlight when leaving insert mode
+" :autocmd InsertLeave * redraw!
+" :au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+" :au InsertLeave * match ExtraWhitespace /\s\+$/
+
+" run flake8 whenever a python file is written
+" autocmd BufWritePost *.py call Flake8()
+
+
+" remap escape to the capslock key
