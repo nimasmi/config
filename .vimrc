@@ -120,6 +120,8 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'jwhitley/vim-matchit'
 " flake8
 Bundle 'nvie/vim-flake8'
+" wakatime
+Bundle 'wakatime/vim-wakatime'
 
 filetype plugin indent on     " required!
 "
