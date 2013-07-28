@@ -122,6 +122,10 @@ Bundle 'jwhitley/vim-matchit'
 Bundle 'nvie/vim-flake8'
 " wakatime
 Bundle 'wakatime/vim-wakatime'
+" airline
+Bundle 'bling/vim-airline'
+" the following required to make airline display in all splits
+set laststatus=2
 
 filetype plugin indent on     " required!
 "
