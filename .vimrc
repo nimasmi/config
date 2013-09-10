@@ -145,6 +145,8 @@ filetype plugin indent on     " required!
 " Vim Colors from https://github.com/daylerees/colour-schemes
 Bundle "daylerees/colour-schemes", { "rtp": "vim-themes/" }
 colorscheme Darkside
+" lesscss syntax highlighting
+Bundle 'groenewege/vim-less'
 
 " remap leader key
 let mapleader=","
