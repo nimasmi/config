@@ -214,3 +214,6 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
 
 " remap escape to the capslock key
+
+" map ,fc to use FuzzyFinder's 'coverage' function
+nnoremap <leader>fc :FufCoverageFile<CR>
