@@ -217,3 +217,9 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 
 " map ,fc to use FuzzyFinder's 'coverage' function
 nnoremap <leader>fc :FufCoverageFile<CR>
+
+" use arrow keys for speedy tab navigation and reordering
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
