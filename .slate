@@ -13,8 +13,8 @@ config windowHintsSpread true
 #config windowHintsOrder persist
 
 # Monitor Aliases
-alias mon-laptop      0
-alias mon-external    1
+alias mon-laptop      1
+alias mon-external    0
 
 # Misc Aliases
 alias showHintsLeftHand hint AOEUIYQJKX
@@ -90,7 +90,7 @@ bind 6:shift;ctrl push top bar-resize:screenSizeY/2
 
 config gridRoundedCornerSize 0
 config gridCellRoundedCornerSize 0
-bind g:cmd grid padding:5 ${mon-laptop}:5,4 ${mon-external}:8,4
+bind g:cmd grid padding:5 ${mon-external}:10,6 ${mon-laptop}:5,4
 bind pad+ throw next
 bind pad. focus behind
 bind pad* layout 2monitors
