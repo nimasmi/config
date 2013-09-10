@@ -106,15 +106,19 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
+" Fugitive: git tools
 Bundle 'tpope/vim-fugitive'
+" Easymotion:
 Bundle 'Lokaltog/vim-easymotion'
+" Sparkup: html markup speedy generation
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
 Bundle 'L9'
+" FuzzyFinder: text-matching in filenames
 Bundle 'FuzzyFinder'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
-" git gutter
+" Gitgutter: display git repo info in gutter
 Bundle 'airblade/vim-gitgutter'
 " matchit
 Bundle 'jwhitley/vim-matchit'
