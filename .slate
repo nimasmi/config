@@ -105,6 +105,7 @@ bind e:cmd  ${showNormalHint}
 alias hyper ctrl;shift;alt;cmd
 
 # Location bindings
+bind space:${hyper} throw next
 bind h:${hyper} ${lefthalf}
 bind t:${hyper} ${full}
 bind n:${hyper} ${righthalf}
