@@ -125,7 +125,7 @@ Bundle 'jwhitley/vim-matchit'
 " flake8
 Bundle 'nvie/vim-flake8'
 " wakatime
-Bundle 'wakatime/vim-wakatime'
+"Bundle 'wakatime/vim-wakatime'
 " airline
 Bundle 'bling/vim-airline'
 " the following required to make airline display in all splits
