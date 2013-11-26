@@ -119,7 +119,11 @@ Bundle 'FuzzyFinder'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " Gitgutter: display git repo info in gutter
-Bundle 'airblade/vim-gitgutter'
+" Bundle 'airblade/vim-gitgutter'
+" Vim git inline diff: gitgutter alternative
+Bundle 'luxflux/vim-git-inline-diff'
+let g:git_diff_changed_symbol = '@'
+let g:git_diff_changed_symbol='⇔'
 " matchit
 Bundle 'jwhitley/vim-matchit'
 " flake8
@@ -223,3 +227,6 @@ nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+
+" gitgutter bugfix
+" let g:gitgutter_realtime = 0
