@@ -108,6 +108,8 @@ Bundle 'gmarik/vundle'
 " original repos on github
 " Fugitive: git tools
 Bundle 'tpope/vim-fugitive'
+" Surround: surround plugin, also by tpope
+Bundle 'tpope/vim-surround'
 " Easymotion:
 Bundle 'Lokaltog/vim-easymotion'
 " Sparkup: html markup speedy generation
