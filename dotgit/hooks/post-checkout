@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Start from the repository root.
+cd ./$(git rev-parse --show-cdup)
+
+# parameter $3 is
+# 1 for branch checkout,
+# 0 for file checkout
+
+# Delete .pyc files and empty directories.
+if [ $3 -eq 1 ] # this is a branch checkout
+then
+    echo 'Branch checkout: deleting *.pyc files'
+    find . -name "*.pyc" -delete
+    find . -type d -empty -delete
+fi
+
+if [ $3 -eq 1 ] # this is a branch checkout, so
+then            # delete .pyc files and empty directories
+    find . -name "*.pyc" -delete
+    find . -type d -empty -delete
+fi
