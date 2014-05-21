@@ -111,13 +111,9 @@ Bundle 'tpope/vim-fugitive'
 " Surround: surround plugin, also by tpope
 Bundle 'tpope/vim-surround'
 " Easymotion:
-Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'Lokaltog/vim-easymotion'
 " Sparkup: html markup speedy generation
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" vim-scripts repos
-Bundle 'L9'
-" FuzzyFinder: text-matching in filenames
-Bundle 'FuzzyFinder'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " Gitgutter: display git repo info in gutter
@@ -218,11 +214,9 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 " run flake8 whenever a python file is written
 " autocmd BufWritePost *.py call Flake8()
 
+set lazyredraw
 
 " remap escape to the capslock key
-
-" map ,fc to use FuzzyFinder's 'coverage' function
-nnoremap <leader>fc :FufCoverageFile<CR>
 
 " use arrow keys for speedy tab navigation and reordering
 nnoremap <C-Left> :tabprevious<CR>
