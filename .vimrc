@@ -110,6 +110,8 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 " Surround: surround plugin, also by tpope
 Bundle 'tpope/vim-surround'
+" Repeat: makes . repeat mapped commands
+Bundle 'tpope/vim-repeat'
 " Easymotion:
 " Bundle 'Lokaltog/vim-easymotion'
 " Sparkup: html markup speedy generation
