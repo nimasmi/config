@@ -215,8 +215,9 @@ nnoremap N Nzzzv
 nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 
 " highlight anything over 80 columns
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-:match OverLength /\%81v.\+/
+" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+" :match OverLength /\%81v.\+/
+" not using this as we're using a right hand margin
 
 " highlight trailing whitespace, (done in a way that future colorscheme
 " commands won't countermand it
@@ -243,3 +244,6 @@ nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 
 " gitgutter bugfix
 " let g:gitgutter_realtime = 0
+
+" indicate a right hand margin at 80 characters
+set colorcolumn=80
