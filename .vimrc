@@ -134,6 +134,8 @@ Bundle 'nvie/vim-flake8'
 Bundle 'bling/vim-airline'
 " the following required to make airline display in all splits
 set laststatus=2
+" Nerdtree
+Bundle 'scrooloose/nerdtree'
 
 filetype plugin indent on     " required!
 "
@@ -180,6 +182,19 @@ set smarttab      " insert tabs on the start of a line according to
                   "    shiftwidth, not tabstop
 
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
+
+" NERDTree config
+let NERDTreeIgnore=['\.pyc$']
+
+" NERDTreeToggle
+function! NERDTreeToggleOrFocus()
+    if expand("%") =~ "NERD_tree"
+        :NERDTreeToggle
+    else
+        call NERDTreeFocus()
+    endif
+endfunction
+nmap <leader>n :call NERDTreeToggleOrFocus()<CR>
 
 " ignore certain files for filename completion
 set wildignore=*.swp,*.bak,*.pyc
