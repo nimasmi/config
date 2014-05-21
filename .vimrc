@@ -149,8 +149,8 @@ filetype plugin indent on     " required!
 " NOTE: comments after Bundle command are not allowed..
 
 " Vim Colors from https://github.com/daylerees/colour-schemes
-Bundle "daylerees/colour-schemes", { "rtp": "vim-themes/" }
-colorscheme Peacock
+Bundle "daylerees/colour-schemes", { "rtp": "vim/" }
+colorscheme peacock
 " lesscss syntax highlighting
 Bundle 'groenewege/vim-less'
 
