@@ -58,6 +58,13 @@ if has("autocmd")
 
   " For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
+  " For markdown files, set some prose-specific settings
+  autocmd FileType markdown set wrap
+  autocmd FileType markdown set linebreak
+  autocmd FileType markdown imap <silent> <Down> <C-o>gj
+  autocmd FileType markdown imap <silent> <Up> <C-o>gk
+  autocmd FileType markdown nmap <silent> <Down> gj
+  autocmd FileType markdown nmap <silent> <Up> gk
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
@@ -68,6 +75,9 @@ if has("autocmd")
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
+
+  " autocmd BufRead,BufNewFile *.markdown set filetype=markdown
+  autocmd BufRead,BufNewFile *.less set filetype=less
 
   augroup END
 
@@ -112,6 +122,10 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 " Repeat: makes . repeat mapped commands
 Bundle 'tpope/vim-repeat'
+" Markdown syntax highlighting
+Bundle 'tpope/vim-markdown'
+" Markdown folding
+Bundle 'nelstrom/vim-markdown-folding'
 " Easymotion:
 " Bundle 'Lokaltog/vim-easymotion'
 " Sparkup: html markup speedy generation
