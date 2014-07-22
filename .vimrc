@@ -257,7 +257,10 @@ nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 
 " gitgutter bugfix
-" let g:gitgutter_realtime = 0
+let g:gitgutter_realtime = 0
 
 " indicate a right hand margin at 80 characters
 set colorcolumn=80
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
