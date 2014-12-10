@@ -127,6 +127,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 " Repeat: makes . repeat mapped commands
 " Bundle 'tpope/vim-repeat'
+" Intelligent substitution and autocorrect, see Abolish entries below
+Bundle 'tpope/vim-abolish'
 " Markdown syntax highlighting
 Bundle 'tpope/vim-markdown'
 " Markdown folding
@@ -155,6 +157,9 @@ Bundle 'bling/vim-airline'
 set laststatus=2
 " Nerdtree
 Bundle 'scrooloose/nerdtree'
+
+" vim-abolish auto-correct-esque entries
+autocmd Abolish filed{,s} field{,s}
 
 filetype plugin indent on     " required!
 "
