@@ -81,6 +81,11 @@ if has("autocmd")
 
   augroup END
 
+  " When in normal mode, use relative line numbers to help with movement
+  " commands. Use absolute line numbering in insert mode.
+  autocmd InsertEnter * :set number
+  autocmd InsertLeave * :set relativenumber
+
 else
 
   set autoindent		" always set autoindenting on
