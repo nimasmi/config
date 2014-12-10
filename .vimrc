@@ -111,54 +111,54 @@ let $UNDER_VIM='Yes, probably'
 
 " Vundle lines below
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-" My Bundles here:
+" My Vundles here:
 "
 " original repos on github
 " Fugitive: git tools
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 " Surround: surround plugin, also by tpope
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 " Repeat: makes . repeat mapped commands
-" Bundle 'tpope/vim-repeat'
+" Plugin 'tpope/vim-repeat'
 " Intelligent substitution and autocorrect, see Abolish entries below
-Bundle 'tpope/vim-abolish'
+Plugin 'tpope/vim-abolish'
 " Markdown syntax highlighting
-Bundle 'tpope/vim-markdown'
+Plugin 'tpope/vim-markdown'
 " Markdown folding
-Bundle 'nelstrom/vim-markdown-folding'
+Plugin 'nelstrom/vim-markdown-folding'
 " Easymotion:
-" Bundle 'Lokaltog/vim-easymotion'
+" Plugin 'Lokaltog/vim-easymotion'
 " Sparkup: html markup speedy generation
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " non github repos
-Bundle 'git://git.wincent.com/command-t.git'
+Plugin 'git://git.wincent.com/command-t.git'
 " Gitgutter: display git repo info in gutter
-" Bundle 'airblade/vim-gitgutter'
+" Plugin 'airblade/vim-gitgutter'
 " Vim git inline diff: gitgutter alternative
-Bundle 'luxflux/vim-git-inline-diff'
+Plugin 'luxflux/vim-git-inline-diff'
 let g:git_diff_changed_symbol = '@'
 let g:git_diff_changed_symbol='⇔'
 " matchit
-Bundle 'jwhitley/vim-matchit'
+Plugin 'jwhitley/vim-matchit'
 " flake8
-Bundle 'nvie/vim-flake8'
+Plugin 'nvie/vim-flake8'
 " wakatime
-"Bundle 'wakatime/vim-wakatime'
+"Plugin 'wakatime/vim-wakatime'
 " airline
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 " the following required to make airline display in all splits
 set laststatus=2
 " Nerdtree
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 " Coffescript highlighting
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'kchmck/vim-coffee-script'
 " python indentation
 Plugin 'hynek/vim-python-pep8-indent'
 
@@ -169,18 +169,18 @@ filetype plugin indent on     " required!
 "
 " Brief help
 " :bundlelist          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+" :PluginInstall(!)    - install(update) bundles
+" :PluginSearch(!) foo - search(or refresh cache first) for foo
+" :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
 
 " Vim Colors from https://github.com/daylerees/colour-schemes
-Bundle "daylerees/colour-schemes", { "rtp": "vim/" }
+Plugin 'daylerees/colour-schemes', { "rtp": "vim/" }
 colorscheme peacock
 " lesscss syntax highlighting
-Bundle 'groenewege/vim-less'
+Plugin 'groenewege/vim-less'
 
 " remap leader key
 let mapleader=","
