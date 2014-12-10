@@ -157,6 +157,10 @@ Bundle 'bling/vim-airline'
 set laststatus=2
 " Nerdtree
 Bundle 'scrooloose/nerdtree'
+" Coffescript highlighting
+Bundle 'kchmck/vim-coffee-script'
+" python indentation
+Plugin 'hynek/vim-python-pep8-indent'
 
 " vim-abolish auto-correct-esque entries
 autocmd Abolish filed{,s} field{,s}
