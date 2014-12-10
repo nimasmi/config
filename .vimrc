@@ -126,7 +126,7 @@ Bundle 'tpope/vim-fugitive'
 " Surround: surround plugin, also by tpope
 Bundle 'tpope/vim-surround'
 " Repeat: makes . repeat mapped commands
-Bundle 'tpope/vim-repeat'
+" Bundle 'tpope/vim-repeat'
 " Markdown syntax highlighting
 Bundle 'tpope/vim-markdown'
 " Markdown folding
