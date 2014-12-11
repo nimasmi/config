@@ -1,0 +1,128 @@
+#
+# This is a sample configuration file for RT/TTS.  Copy it to ~/.ttsrc and
+# edit it as appropriate.
+#
+
+#### Interface options
+#
+# Whether to automatically advance the cursor when 'm'arking, 'd'eleting
+# or 'b'illing an entry.
+
+set mark_advance 0
+set delete_advance 0
+
+## Select the time format used in the display; value can be from 0 to 3.
+#
+# 0:  10:03:37 (default)
+# 1:  10:03
+# 2:  10h 3m 37s
+# 3:  10h 3m
+#
+set time_format 3
+
+### Billing options
+#
+# If set, show billable time in each daily summary.
+
+#set show_billable 1
+
+# If this is set, and a newly added entry contains this string, the entry wil
+# be automatically marked as non-billable.  If the string contains whitespace,
+# it should be wrapped in "quote marks".
+
+#set auto_non_billable [INT]
+
+# If set, when calculating billing time for show_billable, each entry will be
+# rounded up to this many minutes.  For example, if you bill in blocks of
+# 15 minutes:
+
+#set bill_increment 15
+
+# If set, automatically advance the cursor when marking an entry as billable.
+
+#set bill_advance 0
+
+#### Bindings
+#
+# Use the 'bind' command to (re)define keybindings.  Type '?' while TTS is
+# running for a full list of key bindings.
+#
+# You can bind to a single letter, or a symbolic key name like <ENTER>,
+# <TAB>, <CTRL-C> or <F12>.
+
+# Here's one for 'vi' users:
+bind j next
+bind k prev
+
+# Macros work in a similar way to bindings, except the second argument is a
+# string which will be executed as if it was typed.  For example, the
+# following macro would add a new entry called "test", and set its timer to
+# 30 minutes.
+#macro t "atest\n+30m\n"
+
+# Macros can also prompt for input from the user using $[Prompt string]; the
+# $[...] will be replaced with the user's input.  For example, this macro will
+# prompt for the name of a new entry, then set its duration to 30m:
+#macro t "a$[Description:]\n+30m\n"
+
+#### Styling
+#
+# You can style UI elements with the 'style' command.  Its syntax is:
+#
+#	style <element> <foreground> [background]
+#
+# The following elements can be styled:
+#
+# 	header		(the top line of the screen)
+# 	status		(the status line at the bottom)
+# 	date		(the date header)
+# 	entry		(a normal entry)
+# 	selected	(the currently highlighted entry)
+# 	running		(the currently running entry)
+#
+# Behaviour when the highlighted entry is also running is slightly special.
+# In this case, the colours are taken from the 'selected' style, and the
+# attributes of both 'selected' and 'running' are merge.  It's therefore a
+# good idea to apply a style such as 'bold' to the running entry.
+#
+# The following styles are available:
+#
+# 	normal		(no styling)
+# 	bold
+# 	reverse
+# 	blink
+# 	underline
+# 	dim
+# 	standout	(the best highlighting for your terminal; often the same
+# 			 as 'reverse')
+#
+# In addition, the following colours can be used:
+#
+#	default
+# 	black
+# 	red
+# 	green
+# 	yellow
+# 	blue
+# 	magenta
+# 	cyan
+# 	white
+#
+# This is the default styling:
+#
+# 	style header normal
+# 	style status normal
+# 	style entry normal
+# 	style selected normal
+# 	style running bold
+# 	style date underline
+#
+# The following style makes TTS look like Mutt.
+#
+# style header yellow,bold blue
+# style status yellow,bold blue
+# style entry white black
+# style selected yellow,bold red
+# # Use bold *and* underline, because we already bolded 'selected' above.
+# style running bold,underline
+# style date underline,bold
