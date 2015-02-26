@@ -1,0 +1,7 @@
+
+# MacPorts Installer addition on 2014-11-26_at_15:15:51: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+# list running Virtualbox machines
+alias vms='VBoxManage list runningvms'
