@@ -5,3 +5,8 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 # list running Virtualbox machines
 alias vms='VBoxManage list runningvms'
+
+# virtualenvwrapper from http://virtualenvwrapper.readthedocs.org/en/latest/install.html
+export WORKON_HOME=$HOME/.virtualenvs
+# export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
