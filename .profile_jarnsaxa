@@ -10,3 +10,11 @@ alias vms='VBoxManage list runningvms'
 export WORKON_HOME=$HOME/.virtualenvs
 # export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
+
+# git helpfulnesses
+# merge and push to master/staging
+alias gitd2m='git checkout master && git merge develop --no-ff --no-edit && git push && git checkout -'
+alias gitd2s='git checkout staging && git merge develop --no-ff --no-edit && git push && git checkout -'
+# git rebase and autosquash since the commit before the hash used as the last
+# argument of the previous command—use only after `git commit --fixup [hash]`
+alias gitrba='git rebase -i --autosquash $_~1'
