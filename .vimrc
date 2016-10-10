@@ -167,6 +167,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'hynek/vim-python-pep8-indent'
 " puppet indentation
 Plugin 'rodjek/vim-puppet'
+" undo history tree, to visualise undo history
+Plugin 'mbbill/undotree'
 
 " vim-abolish auto-correct-esque entries
 autocmd Abolish filed{,s} field{,s}
@@ -247,6 +249,9 @@ nnoremap N Nzzzv
 
 " Clean trailing whitespace
 nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
+
+" map <leader>h to undo tree toggle
+nnoremap <leader>h :UndotreeToggle<cr>
 
 " highlight anything over 80 columns
 " highlight OverLength ctermbg=red ctermfg=white guibg=#592929
