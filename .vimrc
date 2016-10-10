@@ -66,6 +66,10 @@ if has("autocmd")
   autocmd FileType markdown nmap <silent> <Down> gj
   autocmd FileType markdown nmap <silent> <Up> gk
 
+
+  " Indent 2 spaces for HTML (but not htmldjango filetype)
+  autocmd FileType html setlocal shiftwidth=2 tabstop=2
+
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
   " (happens when dropping a file on gvim).
