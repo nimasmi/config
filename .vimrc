@@ -165,6 +165,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kchmck/vim-coffee-script'
 " python indentation
 Plugin 'hynek/vim-python-pep8-indent'
+" puppet indentation
+Plugin 'rodjek/vim-puppet'
 
 " vim-abolish auto-correct-esque entries
 autocmd Abolish filed{,s} field{,s}
