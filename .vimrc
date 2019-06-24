@@ -36,6 +36,9 @@ if has('mouse')
   set mouse=a
 endif
 
+" Use the system clipboard
+set clipboard^=unnamedplus
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
